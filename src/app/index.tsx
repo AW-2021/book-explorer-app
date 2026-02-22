@@ -24,11 +24,13 @@ const styles = StyleSheet.create({
     gap: 24,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#2FB78E",
+    backgroundColor: "#FFFFFF",
   },
   img: {
     height: 250,
     width: "90%",
+    borderWidth: 1,
+    borderColor: "lightgray",
     borderRadius: 10,
     ...Platform.select({
       ios: {
@@ -48,18 +50,18 @@ const styles = StyleSheet.create({
     fontWeight: 800,
     textAlign: "center",
     paddingHorizontal: 14,
-    color: "#FFFFFF"
+    color: "#2FB78E"
   },
   link: {
     height: 55,
-    backgroundColor: "white",
+    backgroundColor: "#55D4AE",
     borderRadius: 10,
     paddingHorizontal: 18,
     textAlign: "center",
     verticalAlign: "middle",
   },
   linkText: {
-    color: "#2FB78E",
+    color: "#FFFFFF",
     fontSize: 18,
     fontWeight: 500,
   },
