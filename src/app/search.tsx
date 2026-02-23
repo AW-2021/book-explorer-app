@@ -1,9 +1,4 @@
-import {
-  Text,
-  View,
-  StyleSheet,
-  ScrollView,
-} from "react-native";
+import { Text, View, StyleSheet, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Link } from "expo-router";
 
@@ -14,7 +9,8 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import ErrorMessage from "../components/ErrorMessage";
 
 export default function SearchScreen() {
-  const { query, handleQueryChange, results, isLoading, error } = useBookSearch();
+  const { query, handleQueryChange, results, isLoading, error } =
+    useBookSearch();
 
   return (
     <SafeAreaView style={styles.container}>
@@ -39,11 +35,9 @@ export default function SearchScreen() {
         ) : (
           <ScrollView contentContainerStyle={styles.resultsContainer}>
             {results.map((book) => (
-              <Link key={book.id} href={`/books/${book.id}`}>
+              <Link key={`${book.id}-${book.isbn}`} href={`/books/${book.id}`}>
                 <View style={styles.resultItem}>
-                  <Text style={styles.resultTitle}>
-                    {book.title}
-                  </Text>
+                  <Text style={styles.resultTitle}>{book.title}</Text>
                   <Text style={styles.resultAuthor}>
                     by {book.authors.join(", ")}
                   </Text>

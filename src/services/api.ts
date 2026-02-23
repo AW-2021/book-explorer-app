@@ -114,6 +114,5 @@ export async function getBookReviews(title?: string): Promise<BookReview[]> {
     return [];
   }
 
-  console.log(articles.map(transformNYTimesArticleToReview));
   return articles.map(transformNYTimesArticleToReview);
 }
