@@ -42,7 +42,7 @@ export default function SearchScreen() {
               <Link key={book.id} href={`/books/${book.id}`}>
                 <View style={styles.resultItem}>
                   <Text style={styles.resultTitle}>
-                    {book.title} + {book.ratingsCount}
+                    {book.title}
                   </Text>
                   <Text style={styles.resultAuthor}>
                     by {book.authors.join(", ")}
