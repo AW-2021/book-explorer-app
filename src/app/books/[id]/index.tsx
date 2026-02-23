@@ -92,7 +92,7 @@ export default function DetailsScreen() {
               <View style={styles.infoPara}>
                 <Text style={styles.infoHeading}>About the author</Text>
                 <Text style={styles.infoText}>
-                  This book was written by the renowned author{book.authors.length > 0 && 's:'}{" "}
+                  This book was written by the renowned author{book.authors.length > 1 && 's:'}{" "}
                   {book.authors.join(", ")}.
                 </Text>
               </View>
